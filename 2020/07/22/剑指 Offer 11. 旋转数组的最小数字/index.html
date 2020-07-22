@@ -6,13 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Zhttty的博客</title>
+  <title>剑指 Offer 11. 旋转数组的最小数字 | Zhttty的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Zhttty的博客">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="剑指 Offer 11. 旋转数组的最小数字 描述:把一个数组最开始的若干个元素搬到数组的末尾，我们称之为数组的旋转。输入一个递增排序的数组的一个旋转，输出旋转数组的最小元素。例如，数组 [3,4,5,1,2] 为 [1,2,3,4,5] 的一个旋转，该数组的最小值为1。   示例1： 输入: [3,4,5,1,2]输出: 1  示例2: 输入: [2,2,2,0,1]输出: 0  解题思路：一、">
+<meta property="og:type" content="article">
+<meta property="og:title" content="剑指 Offer 11. 旋转数组的最小数字">
+<meta property="og:url" content="http://yoursite.com/2020/07/22/%E5%89%91%E6%8C%87%20Offer%2011.%20%E6%97%8B%E8%BD%AC%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%80%E5%B0%8F%E6%95%B0%E5%AD%97/index.html">
 <meta property="og:site_name" content="Zhttty的博客">
+<meta property="og:description" content="剑指 Offer 11. 旋转数组的最小数字 描述:把一个数组最开始的若干个元素搬到数组的末尾，我们称之为数组的旋转。输入一个递增排序的数组的一个旋转，输出旋转数组的最小元素。例如，数组 [3,4,5,1,2] 为 [1,2,3,4,5] 的一个旋转，该数组的最小值为1。   示例1： 输入: [3,4,5,1,2]输出: 1  示例2: 输入: [2,2,2,0,1]输出: 0  解题思路：一、">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-07-22T01:56:32.535Z">
+<meta property="article:modified_time" content="2020-07-22T02:21:30.757Z">
 <meta property="article:author" content="Zhttty">
 <meta property="article:tag" content="前端">
 <meta property="article:tag" content="js">
@@ -166,130 +170,167 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-剑指 Offer 11. 旋转数组的最小数字" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      剑指 Offer 11. 旋转数组的最小数字
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/22/%E5%89%91%E6%8C%87%20Offer%2011.%20%E6%97%8B%E8%BD%AC%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%80%E5%B0%8F%E6%95%B0%E5%AD%97/" class="archive-article-date">
+
+        
+        <a href="/2020/07/22/%E5%89%91%E6%8C%87%20Offer%2011.%20%E6%97%8B%E8%BD%AC%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%80%E5%B0%8F%E6%95%B0%E5%AD%97/" class="archive-article-date">
   	<time datetime="2020-07-22T01:56:32.535Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-22</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/22/%E5%89%91%E6%8C%87%20Offer%2011.%20%E6%97%8B%E8%BD%AC%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%80%E5%B0%8F%E6%95%B0%E5%AD%97/">剑指 Offer 11. 旋转数组的最小数字</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="剑指-Offer-11-旋转数组的最小数字"><a href="#剑指-Offer-11-旋转数组的最小数字" class="headerlink" title="剑指 Offer 11. 旋转数组的最小数字"></a>剑指 Offer 11. 旋转数组的最小数字</h2><hr>
+<h6 id="描述"><a href="#描述" class="headerlink" title="描述:"></a>描述:</h6><p>把一个数组最开始的若干个元素搬到数组的末尾，我们称之为数组的旋转。输入一个递增排序的数组的一个旋转，输出旋转数组的最小元素。例如，数组 [3,4,5,1,2] 为 [1,2,3,4,5] 的一个旋转，该数组的最小值为1。  </p>
+<h6 id="示例1："><a href="#示例1：" class="headerlink" title="示例1："></a>示例1：</h6><blockquote>
+<p>输入: [3,4,5,1,2]<br>输出: 1</p>
+</blockquote>
+<h6 id="示例2"><a href="#示例2" class="headerlink" title="示例2:"></a>示例2:</h6><blockquote>
+<p>输入: [2,2,2,0,1]<br>输出: 0</p>
+</blockquote>
+<h3 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h3><h4 id="一、遍历法："><a href="#一、遍历法：" class="headerlink" title="一、遍历法："></a>一、遍历法：</h4><p>遍历每一一个元素,对于numbers[i+1]&lt; numbers[i]时直接返回numders[i+1]遍历完仍没找到,则直接返回 numbers[0];</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">minArray</span><span class="params">(<span class="keyword">int</span>[] numbers)</span> </span>&#123;</span><br><span class="line">         <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;numbers.length-<span class="number">1</span>;i++)</span><br><span class="line">            <span class="keyword">if</span>(numbers[i]&gt;numbers[i+<span class="number">1</span>]) <span class="keyword">return</span> numbers[i+<span class="number">1</span>];</span><br><span class="line">        <span class="keyword">return</span> numbers[<span class="number">0</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="二、二分法："><a href="#二、二分法：" class="headerlink" title="二、二分法："></a>二、二分法：</h4><p>numbers[m] &lt; numbers[r]时说明numbers[m]是目标值或者目标值在左边<br>numbers[m] &gt; numbers[r]时说明目标值在左边.<br>numbers[m]==numbers[r]时需要进行r–来试探</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">minArray</span><span class="params">(<span class="keyword">int</span>[] numbers)</span> </span>&#123;</span><br><span class="line">         <span class="keyword">int</span> l=<span class="number">0</span>,r=numbers.length-<span class="number">1</span>,m=r/<span class="number">2</span>;</span><br><span class="line">         <span class="keyword">while</span>(l&lt;r)&#123;</span><br><span class="line">             <span class="keyword">if</span>(numbers[m]&lt;numbers[r])r=m;</span><br><span class="line">             <span class="keyword">else</span> <span class="keyword">if</span>(numbers[m]&gt;numbers[r])l=m+<span class="number">1</span>;</span><br><span class="line">             <span class="keyword">else</span> --r;</span><br><span class="line">             m=l+(r-l)/<span class="number">2</span>;</span><br><span class="line">         &#125;</span><br><span class="line">         <span class="keyword">return</span> numbers[l];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/22/%E5%89%91%E6%8C%87%20Offer%2011.%20%E6%97%8B%E8%BD%AC%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%80%E5%B0%8F%E6%95%B0%E5%AD%97/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/22/%E4%B8%8D%E5%90%8C%E7%9A%84%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%20II/" class="archive-article-date">
-  	<time datetime="2020-07-22T01:39:02.374Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-22</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/07/22/%E4%B8%8D%E5%90%8C%E7%9A%84%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%20II/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">不同的二叉搜索树 II</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/22/%E4%B8%8D%E5%90%8C%E7%9A%84%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%20II/">不同的二叉搜索树 II</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/22/%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C%20II%20-%20%E8%BE%93%E5%85%A5%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84/" class="archive-article-date">
-  	<time datetime="2020-07-22T00:53:35.166Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/22/%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C%20II%20-%20%E8%BE%93%E5%85%A5%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84/">两数之和 II - 输入有序数组</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/19/%E6%88%B3%E6%B0%94%E7%90%83/" class="archive-article-date">
-  	<time datetime="2020-07-19T04:05:43.521Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/19/%E6%88%B3%E6%B0%94%E7%90%83/">戳气球</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -312,8 +353,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
