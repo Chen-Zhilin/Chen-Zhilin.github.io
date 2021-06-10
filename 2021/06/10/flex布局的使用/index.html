@@ -15,7 +15,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>编程 |  Czhlin&#39;s Blog</title>
+      <title>flex布局的使用 |  Czhlin&#39;s Blog</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/images/czhlin.ico" />
@@ -52,204 +52,415 @@
       
     <main class="content on">
       <section class="outer">
-  
-  
-  <article class="articles">
+  <article
+  id="post-flex布局的使用"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
     
-    
-    <h1 class="page-type-title">编程</h1>
-    
-    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  flex布局的使用
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/06/10/flex%E5%B8%83%E5%B1%80%E7%9A%84%E4%BD%BF%E7%94%A8/" class="article-date">
+  <time datetime="2021-06-10T00:29:34.000Z" itemprop="datePublished">2021-06-10</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>
+  </div>
   
-  
-  
-  
-  
-  
-  <div class="archives-wrap">
-    <div class="archive-year-wrap">
-      <a href="/archives/2021" class="archive-year">2021</a>
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> 字数统计:</span>
+            <span class="post-count">705</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> 阅读时长≈</span>
+            <span class="post-count">2 分钟</span>
+        </span>
+    </span>
+</div>
+ 
     </div>
-    <div class="archives">
       
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2021/06/10/flex%E5%B8%83%E5%B1%80%E7%9A%84%E4%BD%BF%E7%94%A8/" class="archive-article-date">
-  <time datetime="2021-06-10T00:29:34.000Z" itemprop="datePublished">06/10</time>
-</a>
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
        
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2021/06/10/flex%E5%B8%83%E5%B1%80%E7%9A%84%E4%BD%BF%E7%94%A8/"
-    >flex布局的使用</a> 
-</h2>
+  <h1 id="flex布局"><a href="#flex布局" class="headerlink" title="flex布局"></a>flex布局</h1><h2 id="传统布局与flex布局"><a href="#传统布局与flex布局" class="headerlink" title="传统布局与flex布局"></a>传统布局与flex布局</h2><h3 id="传统布局"><a href="#传统布局" class="headerlink" title="传统布局"></a>传统布局</h3><ul>
+<li>兼容性好</li>
+<li>布局繁琐</li>
+<li>不能在移动端布局</li>
+</ul>
+<h3 id="flex弹性布局"><a href="#flex弹性布局" class="headerlink" title="flex弹性布局"></a>flex弹性布局</h3><ul>
+<li>操作方便，布局极为简单</li>
+<li>PC端浏览器支持情况较差</li>
+<li>IE11或更低版本，不支持或仅部分支持</li>
+</ul>
+<h2 id="布局原理"><a href="#布局原理" class="headerlink" title="布局原理"></a>布局原理</h2><blockquote>
+<p>flex布局用来为盒状模型提供最大的灵活性，任何一个容器都可以指定为flex布局</p>
+</blockquote>
+<ul>
+<li>父元素指定为<strong>flex</strong>时,子元素的<strong>float、clear和vertical-align属性将失效</strong></li>
+<li>flex布局的元素称呼<ul>
+<li><strong>Flex容器</strong>：采用felx布局的元素</li>
+<li><strong>Flex项目</strong>：Flex容器中的子元素</li>
+<li><strong>Flex项目</strong>在<strong>Flex容器</strong>中可以横向排列也可以纵向排列</li>
+</ul>
+</li>
+<li>原理：通过给<strong>父盒子添加flex属性</strong>，来<strong>控制子盒子的位置和排列方式</strong></li>
+</ul>
+<h2 id="常见父项属性"><a href="#常见父项属性" class="headerlink" title="常见父项属性"></a>常见父项属性</h2><ul>
+<li><p>flex-direction:设置主轴的方向</p>
+<ul>
+<li><p><strong>默认主轴</strong>方向是<strong>x轴</strong>方向，水平向右</p>
+</li>
+<li><p><strong>默认侧轴</strong>方向是<strong>y轴</strong>方向，水平向下</p>
+</li>
+<li><p><strong>flex-dirction设置谁为主轴，剩下的就是侧轴</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">属性值</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">row</td>
+<td align="left">默认值从左到右</td>
+</tr>
+<tr>
+<td align="center">row-reverse</td>
+<td align="left">从右到左</td>
+</tr>
+<tr>
+<td align="center">column</td>
+<td align="left">从上到下</td>
+</tr>
+<tr>
+<td align="center">colunmn-reverse</td>
+<td align="left">从下到上</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+</li>
+<li><p>justify-content:设置主轴的子元素排列方式</p>
+<table>
+<thead>
+<tr>
+<th align="center">属性值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">flex-start</td>
+<td>默认值从头部开始，如果主轴是x轴，则从左到右</td>
+</tr>
+<tr>
+<td align="center">flex-end</td>
+<td>从尾部开始排列</td>
+</tr>
+<tr>
+<td align="center">center</td>
+<td>在主轴居中对齐(如果主轴是x轴则水平居中)</td>
+</tr>
+<tr>
+<td align="center">space-around</td>
+<td>平分剩余空间</td>
+</tr>
+<tr>
+<td align="center">space-between</td>
+<td>先两边贴边再平分剩余空间(重要)</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>flex-wrap:设置子元素是否换行</p>
+<table>
+<thead>
+<tr>
+<th align="center">属性值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">wrap</td>
+<td>一行放不下就换行</td>
+</tr>
+<tr>
+<td align="center">nowrap</td>
+<td>一行放不下，缩小元素的宽度，强塞进一行</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>align-content:设置侧轴上的子元素的排列方式(多行)</p>
+<table>
+<thead>
+<tr>
+<th>属性值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>flex-start</td>
+<td>默认值 从上到下</td>
+</tr>
+<tr>
+<td>flex-end</td>
+<td>从下到上</td>
+</tr>
+<tr>
+<td>center</td>
+<td>挤在一起居中(垂直居中)</td>
+</tr>
+<tr>
+<td>stretch</td>
+<td>拉伸</td>
+</tr>
+<tr>
+<td>space-around</td>
+<td>平分剩余空间</td>
+</tr>
+<tr>
+<td>space-between</td>
+<td>先两边贴边再平分剩余空间(重要)</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>align-items:设置侧轴上的子元素排列方式(单行)</p>
+<table>
+<thead>
+<tr>
+<th>属性值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>flex-start</td>
+<td>默认值 从上到下</td>
+</tr>
+<tr>
+<td>flex-end</td>
+<td>从下到上</td>
+</tr>
+<tr>
+<td>center</td>
+<td>挤在一起居中(垂直居中)</td>
+</tr>
+<tr>
+<td>stretch</td>
+<td>拉伸</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>flex-flow:复合属性，相当于同时设置了flex-direction和flex-wrap</p>
+</li>
+</ul>
+<h2 id="flex布局子项常见属性"><a href="#flex布局子项常见属性" class="headerlink" title="flex布局子项常见属性"></a>flex布局子项常见属性</h2><ul>
+<li><p>flex子项目占的份数:(属性值为数值)</p>
+</li>
+<li><p>align-self控制子项目自己在侧轴的排列方式</p>
+<table>
+<thead>
+<tr>
+<th>属性值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>flex-start</td>
+<td>默认值 从上到下</td>
+</tr>
+<tr>
+<td>flex-end</td>
+<td>从下到上</td>
+</tr>
+<tr>
+<td>center</td>
+<td>挤在一起居中(垂直居中)</td>
+</tr>
+<tr>
+<td>stretch</td>
+<td>拉伸</td>
+</tr>
+<tr>
+<td>space-around</td>
+<td>平分剩余空间</td>
+</tr>
+<tr>
+<td>space-between</td>
+<td>先两边贴边再平分剩余空间(重要)</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>order属性定义子项的排列顺序(前后顺序):(属性值为数值，越小越排在前面)</p>
+</li>
+</ul>
  
-
-    </header>
-    
+      <!-- reward -->
       
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>
-  </div>
-
-    
-    
-  </div>
-</article>
+      <div id="reword-out">
+        <div id="reward-btn">
+          打赏
+        </div>
+      </div>
       
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2021/06/06/2021%20%E5%B9%B4%E5%9B%9B%E5%B7%9D%E7%9C%81%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%AB%9E%E8%B5%9B/" class="archive-article-date">
-  <time datetime="2021-06-06T05:01:38.871Z" itemprop="datePublished">06/06</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2021/06/06/2021%20%E5%B9%B4%E5%9B%9B%E5%B7%9D%E7%9C%81%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%AB%9E%E8%B5%9B/"
-    >The 2021 Sichuan Provincial Collegiate Programming Contest</a> 
-</h2>
- 
-
-    </header>
-    
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>
-  </div>
-
-    
-    
-  </div>
-</article>
-      
-  
-  
-  
-  </div>
-  </div>
-  
-  
-  <div class="archives-wrap">
-    <div class="archive-year-wrap">
-      <a href="/archives/2020" class="archive-year">2020</a>
     </div>
-    <div class="archives">
-      
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/07/22/%E5%89%91%E6%8C%87%20Offer%2011.%20%E6%97%8B%E8%BD%AC%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%80%E5%B0%8F%E6%95%B0%E5%AD%97/" class="archive-article-date">
-  <time datetime="2020-07-22T01:56:32.535Z" itemprop="datePublished">07/22</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2020/07/22/%E5%89%91%E6%8C%87%20Offer%2011.%20%E6%97%8B%E8%BD%AC%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%80%E5%B0%8F%E6%95%B0%E5%AD%97/"
-    >剑指 Offer 11. 旋转数组的最小数字</a> 
-</h2>
- 
+    
 
-    </header>
+    <!-- copyright -->
     
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>
-  </div>
-
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/07/22/%E4%B8%8D%E5%90%8C%E7%9A%84%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%20II/" class="archive-article-date">
-  <time datetime="2020-07-22T01:39:02.374Z" itemprop="datePublished">07/22</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2020/07/22/%E4%B8%8D%E5%90%8C%E7%9A%84%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%20II/"
-    >不同的二叉搜索树 II</a> 
-</h2>
- 
-
-    </header>
-    
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>
-  </div>
-
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/07/22/%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C%20II%20-%20%E8%BE%93%E5%85%A5%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84/" class="archive-article-date">
-  <time datetime="2020-07-22T00:53:35.166Z" itemprop="datePublished">07/22</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2020/07/22/%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C%20II%20-%20%E8%BE%93%E5%85%A5%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84/"
-    >两数之和 II - 输入有序数组</a> 
-</h2>
- 
-
-    </header>
-    
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>
-  </div>
-
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/07/19/%E6%88%B3%E6%B0%94%E7%90%83/" class="archive-article-date">
-  <time datetime="2020-07-19T04:05:43.521Z" itemprop="datePublished">07/19</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2020/07/19/%E6%88%B3%E6%B0%94%E7%90%83/"
-    >戳气球</a> 
-</h2>
- 
-
-    </header>
-    
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>
-  </div>
-
-    
-    
-  </div>
-</article>
-      
-      
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>版权声明： </strong>
+          
+          本博客所有文章除特别声明外，著作权归作者所有。转载请注明出处！
+          
+        </li>
+      </ul>
     </div>
-  </div>
-  
-  
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
 
-  
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://blog.czhlin.top/2021/06/10/flex%E5%B8%83%E5%B1%80%E7%9A%84%E4%BD%BF%E7%94%A8/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+    
+      <a href="/2021/06/06/2021%20%E5%B9%B4%E5%9B%9B%E5%B7%9D%E7%9C%81%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%AB%9E%E8%B5%9B/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">The 2021 Sichuan Provincial Collegiate Programming Contest</div>
+      </a>
+    
+  </nav>
+
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "AxbKTiUuF8kst9p7cRDcYApz-gzGzoHsz",
+    app_key: "wAIkkgKzzpluLBq2XOyKbeWx",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+   
+     
+</article>
+
 </section>
       <footer class="footer">
   <div class="outer">
@@ -401,6 +612,22 @@
 <script src="/js/lazyload.min.js"></script>
 
 <!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
 <link
